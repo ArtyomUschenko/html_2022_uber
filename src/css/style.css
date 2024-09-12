@@ -5,6 +5,9 @@ nav {
   height: 50px;
   background: #212121; }
 
+header {
+  position: relative; }
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -23,7 +26,9 @@ nav {
       padding-right: 0; }
 
 .subheader {
-  height: 87px;
+  position: absolute;
+  width: 100%;
+  height: 84px;
   background: rgba(0, 0, 0, 0.6); }
   .subheader_logo {
     display: block;
@@ -64,36 +69,36 @@ nav {
     text-transform: uppercase; }
 
 .promo {
-  position: absolute;
-  top: 50px;
-  right: 0px;
-  height: 799px;
-  width: 100%;
+  min-height: 800px;
   background: url("../img/bg/main_bg.jpg") center center/cover no-repeat;
-  z-index: -1;
-  padding-top: 114px;
+  padding-top: 150px;
   padding-bottom: 135px; }
-  .promo_title {
-    font-weight: 900;
+  .promo_header {
+    font-weight: 700;
     font-size: 60px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF; }
-  .promo_subtitle {
+    color: #FFFFFF;
+    line-height: 60px;
+    margin-bottom: 0; }
+  .promo_subheader {
+    margin-top: 22px;
     font-weight: 700;
     font-size: 36px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF; }
-  .promo_text {
-    margin-top: 11px;
+    color: #FFFFFF;
+    line-height: 36px;
+    margin-bottom: 0; }
+  .promo_descr {
+    margin-top: 23px;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
     color: #FFFFFF; }
   .promo_btn {
-    margin: 102px auto 0 auto;
+    margin: 118px auto 0 auto;
     height: 63px;
     width: 259px;
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
