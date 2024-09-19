@@ -162,65 +162,54 @@ header
     font-weight: 300
     line-height: 21px
 
-
-//.subheader
-//  background: url("../img/bg/main_bg.jpg") center center/cover no-repeat
-//  height: 799px
-//
-//.information
-//  height: 87px
-//  background: #000000
-//  opacity: 0.7
-//
-//.logo
-//  display: flex
-//  flex-direction: column
-//  height: 87px
-//  justify-content: center
-//  align-items: flex-start
-//  &_text
-//    margin-top: 5px
-//    font-weight: 100
-//    font-size: 13px
-//    color: #FFFFFF
-//
-//.btn
-//  display: flex
-//  height: 87px
-//  align-items: center
-//  justify-content: center
-//  &_bg
-//    padding: 13px 0
-//    height: 46px
-//    width: 162px
-//    font-weight: 400
-//    font-size: 14px
-//    text-align: center
-//    text-transform: uppercase
-//    color: #FFFFFF
-//    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
-//    height: 46px
-//    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
-//    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
-//    border-radius: 4px
-//
-//.contact
-//  display: flex
-//  flex-direction: column
-//  height: 87px
-//  justify-content: center
-//  color: #FFFFFF
-//  &_telephone
-//    font-weight: 400
-//    font-size: 22px
-//    text-align: right
-//    text-transform: uppercase
-//  &_text
-//    font-weight: 300
-//    font-size: 12px
-//    text-align: right
+.possibilities
+  padding: 46px 0 80px 0
+  background: url("../img/bg/mobile_app.png") center center/cover no-repeat
+  &_block
+    display: flex
+    justify-content: space-around
+  &_text
+    font-weight: 400
+    font-size: 17px
+    color: #222222
+    text-align: center
+    margin-top: 10px
+    margin-bottom: 11px
+  &_descr
+    position: relative
+    margin-top: 19px
+    width: 320px
+    height: 280px
+    padding: 82.5px 11px 34px 11px
+  &_subtitle
+    width: 297px
+    height: 62px
+    font-weight: 400
+    font-size: 24px
+    line-height: 31px
+    color: #FFFFFF
+    text-transform: uppercase
+    text-align: center
+  &_round
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    top: 217px
+    left: 50%
+    transform: translate(-50%, 0)
+    font-size: 27px
+    position: absolute
+    color: #1EACC7
+    width: 29px
+    height: 29px
+    background: #000000
+    border-radius: 100%
 
 
 
 
 
+@for $i from 1 through 6
+  .possibilities_img_#{$i}
+    background: url("../img/bg/mobile_screen_#{$i}.jpg")
