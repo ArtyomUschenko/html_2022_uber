@@ -1,6 +1,9 @@
 *
   font-family: 'Roboto', sans-serif
 
+$color_blue_dark: #1eacc7
+$color_blue: #4CE2FF
+
 nav
   height: 50px
   background: #212121
@@ -62,7 +65,7 @@ header
     width: 172px
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
     border-radius: 4px
-    background-image: linear-gradient(to top, #1EACC7 0%, #4CE2FF 100%)
+    background-image: linear-gradient(to top, $color_blue_dark 0%, $color_blue 100%)
     color: #FFFFFF
     font-weight: 400
     font-size: 14px
@@ -104,7 +107,7 @@ header
     width: 259px
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
     border-radius: 4px
-    background-image: linear-gradient(to top, #1EACC7 0%, #4CE2FF 100%)
+    background-image: linear-gradient(to top, $color_blue_dark 0%, $color_blue 100%)
     color: #FFFFFF
     font-weight: 400
     font-size: 18px
@@ -120,6 +123,10 @@ header
   font-weight: 700
   text-transform: uppercase
   text-align: center
+  &_white
+    position: relative
+    color: white
+    z-index: 1
 
 .label
   margin: 0 auto
@@ -131,7 +138,23 @@ header
   font-size: 11px
   font-weight: 300
   text-transform: uppercase
+  text-align: center
+  &_black
+    position: relative
+    background-color: #ffffff
+    color: #000000
+    z-index: 1
 
+.subtitle
+  font-weight: 400
+  font-size: 17px
+  color: #222222
+  margin-top: 8px
+  text-align: center
+  &_white
+    color: white
+    position: relative
+    z-index: 1
 
 .reasons
   padding: 71px 0 65px 0
@@ -147,13 +170,13 @@ header
     margin-right: 26px
     width: 113px
     height: 113px
-    background-color: #1eacc7
+    background-color: $color_blue_dark
     border-radius: 100%
   &_descr
     width: 343px
   &_reasons_subtitle
     line-height: 21px
-    color: #1eacc7
+    color: $color_blue_dark
     font-size: 17px
     font-weight: 400
   &_text
@@ -162,54 +185,125 @@ header
     font-weight: 300
     line-height: 21px
 
-.possibilities
-  padding: 46px 0 80px 0
+
+.mobile
+  min-height: 864px
+  padding: 48px 0 79px 0
   background: url("../img/bg/mobile_app.png") center center/cover no-repeat
-  &_block
-    display: flex
-    justify-content: space-around
-  &_text
-    font-weight: 400
-    font-size: 17px
-    color: #222222
-    text-align: center
-    margin-top: 10px
-    margin-bottom: 11px
-  &_descr
+  .row
+    margin-top: 32px
+  &_item
     position: relative
-    margin-top: 19px
     width: 320px
     height: 280px
-    padding: 82.5px 11px 34px 11px
-  &_subtitle
-    width: 297px
-    height: 62px
-    font-weight: 400
-    font-size: 24px
-    line-height: 31px
-    color: #FFFFFF
-    text-transform: uppercase
-    text-align: center
-  &_round
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: center
-    top: 217px
-    left: 50%
-    transform: translate(-50%, 0)
-    font-size: 27px
-    position: absolute
-    color: #1EACC7
-    width: 29px
-    height: 29px
-    background: #000000
-    border-radius: 100%
-
-
-
-
+    margin: 0 auto
+    margin-bottom: 19px
+    padding-top: 92px
+    &_subtitle
+      font-weight: 400
+      font-size: 24px
+      line-height: 31px
+      text-transform: uppercase
+      text-align: center
+      color: #FFFFFF
+    &_plus
+      position: absolute
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 29px
+      height: 29px
+      background: #000000
+      margin: 0 auto
+      border-radius: 100%
+      padding: 6px
+      bottom: 35px
+      left: 50%
+      transform: translate(-50%, 0)
+      cursor: pointer
 
 @for $i from 1 through 6
-  .possibilities_img_#{$i}
+  .mobile_item_#{$i}
     background: url("../img/bg/mobile_screen_#{$i}.jpg")
+
+
+
+
+.car
+  height: 864px
+  background: url("../img/bg/mobile_app.png") center center/cover no-repeat
+  padding: 57px 0 137.5px 0
+  position: relative
+  z-index: 1
+  &_black
+    right: 0
+    top: 0
+    position: absolute
+    background: black
+    height: 502px
+    width: 100%
+    z-index: 0
+  &_img
+    display: block
+    position: relative
+    margin: 25px auto 0 auto
+    z-index: 1
+  &_text
+    margin: 0 auto
+    font-weight: 300
+    font-size: 17px
+    line-height: 24px
+    color: #222222
+    text-align: center
+    width: 327px
+
+.conditions
+  min-height: 917px
+  padding: 66px 0 26px 0
+  .row
+    margin-top: 33px
+  &_subtitle
+    font-weight: 400
+    font-size: 22px
+    color: #1CA8C3
+    &__red
+      color: #FF5656
+  &_text
+    font-weight: 300
+    font-size: 17px
+    color: #1CA8C3
+  &_title
+    margin-bottom: 61px
+  &_list
+    margin-top: 20px
+  ul
+    list-style-type:  none
+    padding-left: 18px
+  img
+    padding-right: 15px
+  li
+    font-weight: 300
+    font-size: 17px
+    line-height: 24px
+    color: #222222
+
+.maps
+  min-height: 720px
+  background: #080816
+
+  &_bg
+    background: url("../img/bg/map.jpg") center center/cover no-repeat
+    min-height: 720px
+    padding: 48px 0 49px 0
+  &_btn
+    text-decoration: none
+    display: block
+    margin-top: 479px
+    text-align: center
+    font-weight: 400
+    font-size: 15px
+    color: #1FBAD6
+    text-transform: uppercase
+
+
+
