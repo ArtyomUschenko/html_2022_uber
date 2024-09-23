@@ -309,4 +309,59 @@ header {
     color: #1FBAD6;
     text-transform: uppercase; }
 
+.footer {
+  padding: 13px 0 39px 0;
+  position: relative; }
+  .footer hr {
+    width: 299px;
+    height: 4px;
+    background: #1FBAD6;
+    margin: 0 auto;
+    border: 0;
+    opacity: unset; }
+  .footer_menu {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 32px;
+    list-style-type: none; }
+  .footer_item {
+    margin-right: 48px; }
+    .footer_item:last-child {
+      margin-right: 0; }
+  .footer_link {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    color: #070716;
+    align-items: center;
+    text-transform: uppercase; }
+  .footer_menugrey {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style-type: none;
+    margin-top: 15px; }
+  .footer_grey {
+    margin-right: 22px;
+    font-weight: 300;
+    font-size: 11px;
+    color: #999999;
+    text-transform: uppercase; }
+    .footer_grey:last-child {
+      margin-right: 0; }
+  .footer_language {
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    color: #1FBAD6;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 19px auto 0 auto;
+    text-align: center; }
+  .footer_img {
+    position: absolute;
+    top: 52px;
+    right: 23px; }
+
 /*# sourceMappingURL=style.css.map */
