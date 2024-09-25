@@ -4,13 +4,18 @@
 $color_blue_dark: #1eacc7
 $color_blue: #4CE2FF
 
+=btn_hover
+  &:hover
+    background-image: none
+    background-color: $color_blue
+
+
 nav
   height: 50px
   background: #212121
 
 header
   position: relative
-
 
 .menu
   display: flex
@@ -71,6 +76,7 @@ header
     font-size: 14px
     text-align: center
     text-transform: uppercase
+    +btn_hover
 
 .promo
   min-height: 800px
@@ -113,6 +119,7 @@ header
     font-size: 18px
     text-align: center
     text-transform: uppercase
+    +btn_hover
 
 
 .title
@@ -221,6 +228,27 @@ header
       left: 50%
       transform: translate(-50%, 0)
       cursor: pointer
+      &:before
+        content: ""
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $color_blue_dark
+        transition: 0.5s all
+      &:after
+        content: ""
+        display: block
+        width: 2px
+        height: 14px
+        left: 50%
+        background-color: $color_blue_dark
+        position: absolute
+        transform: translate(-50%, 0)
+        transition: 0.5s all
+      &:hover
+        &:before, &:after
+          background-color: $color_blue
+
 
 @for $i from 1 through 6
   .mobile_item_#{$i}
